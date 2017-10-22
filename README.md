@@ -10,7 +10,7 @@ Simply `#include` the dogfault header in the file that contains `main`. Setup is
 
 In order for dogfault to access function names for its stack trace, source files must be compiled with the `-rdynamic` flag. Without this flag function addresses will be printed without their corresponding function name.
 
-Dogfault uses POSIX features, so for programs compiled to an ANSI C standard the POSIX version must be specified using either `-D_POSIX_C_SOURCE=199309L` (199309L or greater) or by compiling with `--std=gnu<std version>` instead of `--std=<std version>`.
+Dogfault uses POSIX features, so for programs compiled against a specific ANSI C standard the POSIX version must be specified using either `-D_POSIX_C_SOURCE=199309L` (199309 or greater) or by compiling with `--std=<gnu std version>` instead of `--std=<std version>`.
 
 As an example:
 ```C
