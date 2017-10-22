@@ -9,7 +9,7 @@
 
 #define DOGFAULT_MAX_BACKTRACE 2048
 #define DOGFAULT_ERROR "dogfault error: "
-#define DOGFAULT_HANDLER_FORMAT                                                \
+#define DOGFAULT_HANDLER_FORMAT \
 "\
                         __\n\
  ,                    ,\" e`--o  *bark*\n\
