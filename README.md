@@ -1,6 +1,6 @@
 # Dogfault - A Doggo Themed Segfault Handler
 
-Dogfault replaces the default segmentation fault handler with a dog themed handler that will print diagnostic information about the segfault as well as a stack trace before exiting the program.
+Dogfault replaces the default segmentation fault handler with a dog themed handler that will print the location of the segfault as well as a stack trace before exiting the program.
 
 Now instead of seeing `Segmentation fault (core dumped)` every time you get a segfault, you can be greeted by an 11/10 good boy!
 
@@ -10,7 +10,7 @@ Simply `#include` the dogfault header in the file that contains `main`. Setup is
 
 In order for dogfault to access function names for its stack trace, source files must be compiled with the `-rdynamic` flag. Without this flag function addresses will be printed without their corresponding function name.
 
-Dogfault uses POSIX features, so for programs compiled against a specific ANSI C standard the POSIX version must be specified using either `-D_POSIX_C_SOURCE=199309L` (199309 or greater) or by compiling with `--std=<gnu std version>` instead of `--std=<std version>`.
+Dogfault uses POSIX features, so for programs compiled against a specific ANSI C standard you must specify the POSIX standard using `-D_POSIX_C_SOURCE=199309L` (199309 or greater) or by compiling with `--std=<gnu std version>` instead of `--std=<std version>`.
 
 As an example:
 ```C
