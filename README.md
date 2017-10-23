@@ -41,7 +41,8 @@ void bar(void)
 ```
 # In the dogfault directory
 $ gcc example.c -I. -rdynamic
-$ ./a.out 
+$ ./a.out
+
                         __
  ,                    ," e`--o  *bark*
 ((                   (  | __,'   Segmentation fault at address: 0x3e8000077bd

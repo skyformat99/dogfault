@@ -9,8 +9,8 @@
 
 #define DOGFAULT_MAX_BACKTRACE 2048
 #define DOGFAULT_ERROR "dogfault error: "
-#define DOGFAULT_HANDLER_FORMAT \
-"\
+#define DOGFAULT_HANDLER_DOGGO_FORMAT \
+"\n\
                         __\n\
  ,                    ,\" e`--o  *bark*\n\
 ((                   (  | __,'   Segmentation fault at address: %p\n\
@@ -25,7 +25,7 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 static void dogfault_sigaction_handler(int sig, siginfo_t* si, void* arg)
 {
-    fprintf(stderr, DOGFAULT_HANDLER_FORMAT, si->si_addr);
+    fprintf(stderr, DOGFAULT_HANDLER_DOGGO_FORMAT, si->si_addr);
 
     void* backtrace_buff[DOGFAULT_MAX_BACKTRACE];
     int nframes = backtrace(backtrace_buff, DOGFAULT_MAX_BACKTRACE);
